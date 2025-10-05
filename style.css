@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Montserrat";
+    font-weight: bold;
+    color: white;
+    font-size: 45px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.container img {
+    width: 100%;
+    height: 100vh;
+}
+
+span {
+    background-color: crimson !important;
+}
+
+.home {
+    background-color: #0000be;
+}
+
+/* custom css for section home */
+.home-right img {
+    width: 40%;
+    height: auto;
+    float: right;
+    padding-right: 10%;
+}
+
+.home-left {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    transform: translate(-10%, -40%);
+    width: 50%;
+    color: white;
+}
+
+.home-left p {
+    font-size: 20px;
+    text-indent: 10px;
+    padding-top: 20px;
+}
+
+.home-left .button {
+    margin-top: 5%;
+}
+
+.home-left .button a {
+    background: transparent;
+    border: 1px solid white;
+    width: 200px;
+    height: 55px;
+    color: white;
+    line-height: 50px;
+    padding: 10px 15px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all .3s ease-in-out;
+
+}
+
+.home-left .button .btn-1:hover {
+    background: rgba(0, 0, 0, .8);
+}
+
+.home-left .button .btn-2:hover {
+    background: chocolate;
+}
