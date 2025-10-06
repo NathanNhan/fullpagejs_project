@@ -80,3 +80,8 @@ span {
 .home-left .button .btn-2:hover {
     background: chocolate;
 }
+
+/* custom css for section pictures */
+.fp-slidesNav.fp-bottom {
+    text-align: center;
+}
