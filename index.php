@@ -1,21 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullpage.js/dist/fullpage.min.css">
-
-</head>
+<?php get_header(); ?>
 
 <body>
     <div id="fullpage">
 
         <div class="section home">
             <div class="home-right">
-                <img src="./images/camera1.png" />
+                <img src="<?php echo get_theme_file_uri() ?> . /images/camera1.png" />
             </div>
             <div class="home-left">
                 <h1 class="home_title">Best Camera resolution!</h1>
@@ -31,10 +21,14 @@
             </div>
         </div>
         <div class="section pic">
-            <div class="slide"><img src="images/photo-01.jpg" width="100%" height="100%" alt="" /></div>
-            <div class="slide"><img src="images/photo-02.jpg" width="100%" height="100%" alt="" /></div>
-            <div class="slide"><img src="images/photo-03.jpg" width="100%" height="100%" alt="" /></div>
-            <div class="slide"><img src="images/photo-04.jpg" width="100%" height="100%" alt="" /></div>
+            <div class="slide"><img src="<?php echo get_theme_file_uri() ?> . /images/photo-01.jpg" width="100%"
+                    height="100%" alt="" /></div>
+            <div class="slide"><img src="<?php echo get_theme_file_uri() ?> . /images/photo-02.jpg" width="100%"
+                    height="100%" alt="" /></div>
+            <div class="slide"><img src="<?php echo get_theme_file_uri() ?> . /images/photo-03.jpg" width="100%"
+                    height="100%" alt="" /></div>
+            <div class="slide"><img src="<?php echo get_theme_file_uri() ?> . /images/photo-04.jpg" width="100%"
+                    height="100%" alt="" /></div>
         </div>
         <div class="section photographer">
             <h1>Photographer</h1>
@@ -44,7 +38,7 @@
                     <div class="content">
                         <div class="image-container">
                             <span></span>
-                            <img src="images/photographer-1.jpg" alt="">
+                            <img src="<?php echo get_theme_file_uri() ?> . /images/photographer-1.jpg" alt="">
 
                         </div>
                         <div class="content-txt">
@@ -59,7 +53,7 @@
                     <div class="content">
                         <div class="image-container">
                             <span></span>
-                            <img src="images/photographer-1.jpg" alt="">
+                            <img src="<?php echo get_theme_file_uri() ?> . /images/photographer-1.jpg" alt="">
 
                         </div>
                         <div class="content-txt">
@@ -74,7 +68,7 @@
                     <div class="content">
                         <div class="image-container">
                             <span></span>
-                            <img src="images/photographer-1.jpg" alt="">
+                            <img src="<?php echo get_theme_file_uri() ?> . /images/photographer-1.jpg" alt="">
                         </div>
                         <div class="content-txt">
                             <h2>Peter</h2>
@@ -88,7 +82,7 @@
                     <div class="content">
                         <div class="image-container">
                             <span></span>
-                            <img src="images/photographer-1.jpg" alt="">
+                            <img src="<?php echo get_theme_file_uri() ?> . /images/photographer-1.jpg" alt="">
 
                         </div>
                         <div class="content-txt">
@@ -103,35 +97,51 @@
         <div class="section img-gallery">
             <div id="container">
                 <div class="gallery">
-                    <div class="image_gallery"><img src="images/photo-03.jpg" alt=""></div>
+                    <div class="image_gallery"><img src="<?php echo get_theme_file_uri() ?> . /images/photo-03.jpg"
+                            alt="">
+                    </div>
                 </div>
                 <div class="gallery">
-                    <div class="image_gallery"><img src="images/photo-03.jpg" alt=""></div>
+                    <div class="image_gallery"><img src="<?php echo get_theme_file_uri() ?> . /images/photo-03.jpg"
+                            alt="">
+                    </div>
                 </div>
                 <div class="gallery">
-                    <div class="image_gallery"><img src="images/photo-03.jpg" alt=""></div>
+                    <div class="image_gallery"><img src="<?php echo get_theme_file_uri() ?> . /images/photo-03.jpg"
+                            alt="">
+                    </div>
                 </div>
                 <div class="gallery">
-                    <div class="image_gallery"><img src="images/photo-03.jpg" alt=""></div>
+                    <div class="image_gallery"><img src="<?php echo get_theme_file_uri() ?> . /images/photo-03.jpg"
+                            alt="">
+                    </div>
                 </div>
                 <div class="gallery">
-                    <div class="image_gallery"><img src="images/photo-03.jpg" alt=""></div>
+                    <div class="image_gallery"><img src="<?php echo get_theme_file_uri() ?> . /images/photo-03.jpg"
+                            alt="">
+                    </div>
                 </div>
                 <div class="gallery">
-                    <div class="image_gallery"><img src="images/photo-03.jpg" alt=""></div>
+                    <div class="image_gallery"><img src="<?php echo get_theme_file_uri() ?> . /images/photo-03.jpg"
+                            alt="">
+                    </div>
                 </div>
                 <div class="gallery">
-                    <div class="image_gallery"><img src="images/photo-03.jpg" alt=""></div>
+                    <div class="image_gallery"><img src="<?php echo get_theme_file_uri() ?> . /images/photo-03.jpg"
+                            alt="">
+                    </div>
                 </div>
                 <div class="gallery">
-                    <div class="image_gallery"><img src="images/photo-03.jpg" alt=""></div>
+                    <div class="image_gallery"><img src="<?php echo get_theme_file_uri() ?> . /images/photo-03.jpg"
+                            alt="">
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="loading-page">
-            <svg id="svg" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+            <svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
                 <path
                     d="M479.8 576L384.7 576L276.5 421.5L276.5 512.6L190.1 576L92.4 576L92.4 93.8L132.9 64L240.9 64L364.6 240.1L364.6 127.4L451 64L548.7 64L548.7 525.5L479.8 576zM103.2 99.3L103.2 560L175.2 507.1L175.2 258L390.7 565.6L475.5 565.6L527.9 527.4L449.6 527.4L133.5 76.9L103.3 99.2zM185.7 565.9L265.7 507.1L265.7 406.1L185.9 291.7L185.9 512.6L113.3 565.9L185.6 565.9L185.6 565.9zM145 74.8L455.6 517.4L538 517.4L538 74.8L458.2 74.8L458.2 392.4L235.3 74.8L145 74.8zM375.4 255.6L447.4 358.4L447.4 79.9L375.4 132.9L375.4 255.6z" />
             </svg>
@@ -141,32 +151,7 @@
             </div>
         </div>
     </div>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/fullpage.js/dist/fullpage.min.js"></script>
-    <script>
-        new fullpage('#fullpage', {
-            //options here
-            autoScrolling: true,
-            scrollHorizontally: true,
-            navigation: true,
-            navigationTooltips: ['Home', 'Pics', 'Photographers', 'Photos'],
-            showActiveTooltip: true,
-            slidesNavigation: true,
-            controlArrows: false,
-            scrollingSpeed: 700
-
-
-        });
-
-        fullpage_api.setAllowScrolling(false);
-
-    </script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
-        integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="/js/custom.js"></script>
+    <?php wp_footer(); ?>
 </body>
 
-</html>
+<?php get_footer(); ?>
