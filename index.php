@@ -5,18 +5,22 @@
 
         <div class="section home">
             <div class="home-right">
-                <img src="<?php echo get_theme_file_uri() ?> . /images/camera1.png" />
+                <?php
+
+                if (get_field('home_image', "27")): ?>
+                <img src="<?php the_field('home_image', "27")?>" />
+                <?php endif; ?>
+
             </div>
             <div class="home-left">
-                <h1 class="home_title">Best Camera resolution!</h1>
-                <h3>Photographer</h3>
+                <h1 class="home_title"><?php the_field('sut_title', '27'); ?></h1>
+                <h3><?php the_field('title', '27'); ?></h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, quaerat quis! Sequi reiciendis
-                    praesentium illum ducimus error ad laboriosam harum.
+                    <?php the_field('des', '27'); ?>
                 </p>
                 <div class="button">
-                    <a href="#" class="btn-1">Get Started</a>
-                    <a href="#" class="btn-2">Register</a>
+                    <a href="<?php the_field('link_started_button', '27'); ?>" class="btn-1">Get Started</a>
+                    <a href="<?php the_field('link_register_button', '27'); ?>" class="btn-2">Register</a>
                 </div>
             </div>
         </div>
@@ -37,7 +41,7 @@
 
                     <div class="content">
                         <div class="image-container">
-                            <span></span>
+                            <span class="overlay"></span>
                             <img src="<?php echo get_theme_file_uri() ?> . /images/photographer-1.jpg" alt="">
 
                         </div>
@@ -49,10 +53,10 @@
                     </div>
                 </div>
                 <div class="imageBox">
-                    <span></span>
+                    <span class="overlay"></span>
                     <div class="content">
                         <div class="image-container">
-                            <span></span>
+                            <span class="overlay"></span>
                             <img src="<?php echo get_theme_file_uri() ?> . /images/photographer-1.jpg" alt="">
 
                         </div>
@@ -64,10 +68,10 @@
                     </div>
                 </div>
                 <div class="imageBox">
-                    <span></span>
+                    <span class="overlay"></span>
                     <div class="content">
                         <div class="image-container">
-                            <span></span>
+                            <span class="overlay"></span>
                             <img src="<?php echo get_theme_file_uri() ?> . /images/photographer-1.jpg" alt="">
                         </div>
                         <div class="content-txt">
@@ -78,10 +82,10 @@
                     </div>
                 </div>
                 <div class="imageBox">
-                    <span></span>
+                    <span class="overlay"></span>
                     <div class="content">
                         <div class="image-container">
-                            <span></span>
+                            <span class="overlay"></span>
                             <img src="<?php echo get_theme_file_uri() ?> . /images/photographer-1.jpg" alt="">
 
                         </div>
