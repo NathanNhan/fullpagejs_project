@@ -25,121 +25,63 @@
             </div>
         </div>
         <div class="section pic">
-            <div class="slide"><img src="<?php echo get_theme_file_uri() ?> . /images/photo-01.jpg" width="100%"
-                    height="100%" alt="" /></div>
-            <div class="slide"><img src="<?php echo get_theme_file_uri() ?> . /images/photo-02.jpg" width="100%"
-                    height="100%" alt="" /></div>
-            <div class="slide"><img src="<?php echo get_theme_file_uri() ?> . /images/photo-03.jpg" width="100%"
-                    height="100%" alt="" /></div>
-            <div class="slide"><img src="<?php echo get_theme_file_uri() ?> . /images/photo-04.jpg" width="100%"
-                    height="100%" alt="" /></div>
+            <?php if (have_rows('slider_', '27')): ?>
+
+            <?php while (have_rows('slider_', '27')): the_row();
+                    $image = get_sub_field('slide_item');
+                ?>
+            <div class="slide"><img src="<?php echo $image; ?>" width="100%" height="100%" alt="" /></div>
+            <?php endwhile; ?>
+
+            <?php endif; ?>
+
         </div>
         <div class="section photographer">
-            <h1>Photographer</h1>
+            <h1><?php the_field('title_section', '27'); ?></h1>
             <div class="image-box">
+                <?php if (have_rows('members', '27')): ?>
+
+                <?php while (have_rows('members', '27')): the_row();
+                        $image_member = get_sub_field('member_image');
+                        $name_member  = get_sub_field('member_name');
+                    ?>
+
                 <div class="imageBox">
 
                     <div class="content">
                         <div class="image-container">
                             <span class="overlay"></span>
-                            <img src="<?php echo get_theme_file_uri() ?> . /images/photographer-1.jpg" alt="">
+                            <img src="<?php echo $image_member;?>" alt="">
 
                         </div>
                         <div class="content-txt">
-                            <h2>Nathan</h2>
+                            <h2><?php echo $name_member; ?></h2>
                             <p><i class="fa fa-facebook-squre"></i><i class="fa fa-facebook-squre"></i><i
                                     class="fa fa-facebook-squre"></i></p>
                         </div>
                     </div>
                 </div>
-                <div class="imageBox">
-                    <span class="overlay"></span>
-                    <div class="content">
-                        <div class="image-container">
-                            <span class="overlay"></span>
-                            <img src="<?php echo get_theme_file_uri() ?> . /images/photographer-1.jpg" alt="">
+                <?php endwhile; ?>
 
-                        </div>
-                        <div class="content-txt">
-                            <h2>Ana</h2>
-                            <p><i class="fa fa-facebook-squre"></i><i class="fa fa-facebook-squre"></i><i
-                                    class="fa fa-facebook-squre"></i></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="imageBox">
-                    <span class="overlay"></span>
-                    <div class="content">
-                        <div class="image-container">
-                            <span class="overlay"></span>
-                            <img src="<?php echo get_theme_file_uri() ?> . /images/photographer-1.jpg" alt="">
-                        </div>
-                        <div class="content-txt">
-                            <h2>Peter</h2>
-                            <p><i class="fa fa-facebook-squre"></i><i class="fa fa-facebook-squre"></i><i
-                                    class="fa fa-facebook-squre"></i></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="imageBox">
-                    <span class="overlay"></span>
-                    <div class="content">
-                        <div class="image-container">
-                            <span class="overlay"></span>
-                            <img src="<?php echo get_theme_file_uri() ?> . /images/photographer-1.jpg" alt="">
-
-                        </div>
-                        <div class="content-txt">
-                            <h2>Andrew</h2>
-                            <p><i class="fa fa-facebook-squre"></i><i class="fa fa-facebook-squre"></i><i
-                                    class="fa fa-facebook-squre"></i></p>
-                        </div>
-                    </div>
-                </div>
+                <?php endif; ?>
             </div>
         </div>
         <div class="section img-gallery">
             <div id="container">
+                <?php if (have_rows('photos', '27')): ?>
+
+                <?php while (have_rows('photos', '27')): the_row();
+                        $image_gallery = get_sub_field('item');
+                    ?>
                 <div class="gallery">
-                    <div class="image_gallery"><img src="<?php echo get_theme_file_uri() ?> . /images/photo-03.jpg"
-                            alt="">
+                    <div class="image_gallery"><img src="<?php echo $image_gallery; ?>" alt="">
                     </div>
                 </div>
-                <div class="gallery">
-                    <div class="image_gallery"><img src="<?php echo get_theme_file_uri() ?> . /images/photo-03.jpg"
-                            alt="">
-                    </div>
-                </div>
-                <div class="gallery">
-                    <div class="image_gallery"><img src="<?php echo get_theme_file_uri() ?> . /images/photo-03.jpg"
-                            alt="">
-                    </div>
-                </div>
-                <div class="gallery">
-                    <div class="image_gallery"><img src="<?php echo get_theme_file_uri() ?> . /images/photo-03.jpg"
-                            alt="">
-                    </div>
-                </div>
-                <div class="gallery">
-                    <div class="image_gallery"><img src="<?php echo get_theme_file_uri() ?> . /images/photo-03.jpg"
-                            alt="">
-                    </div>
-                </div>
-                <div class="gallery">
-                    <div class="image_gallery"><img src="<?php echo get_theme_file_uri() ?> . /images/photo-03.jpg"
-                            alt="">
-                    </div>
-                </div>
-                <div class="gallery">
-                    <div class="image_gallery"><img src="<?php echo get_theme_file_uri() ?> . /images/photo-03.jpg"
-                            alt="">
-                    </div>
-                </div>
-                <div class="gallery">
-                    <div class="image_gallery"><img src="<?php echo get_theme_file_uri() ?> . /images/photo-03.jpg"
-                            alt="">
-                    </div>
-                </div>
+
+                <?php endwhile; ?>
+
+                <?php endif; ?>
+
             </div>
         </div>
 

@@ -44,7 +44,8 @@ a:hover {
     height: 100vh;
 }
 
-span.overlay, #fp-nav span {
+span.overlay,
+#fp-nav span {
     background-color: crimson !important;
 }
 
@@ -109,6 +110,11 @@ span.overlay, #fp-nav span {
 /* custom css for section pictures */
 .fp-slidesNav.fp-bottom {
     text-align: center;
+}
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    background-color: crimson !important;
 }
 
 /* custom css for section photographers */
