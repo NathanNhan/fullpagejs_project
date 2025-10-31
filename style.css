@@ -117,6 +117,19 @@ span.overlay,
     background-color: crimson !important;
 }
 
+@media only screen and (max-width: 768px) {
+    .slide img {
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    .fp-slidesNav.fp-bottom {
+        position: absolute !important;
+        left: 12% !important;
+        bottom: 10% !important;
+    }
+}
+
 /* custom css for section photographers */
 .image-box {
     position: relative;
@@ -128,7 +141,24 @@ span.overlay,
     padding-bottom: 50px;
     gap: 25px;
     text-align: center;
+
 }
+
+@media only screen and (max-width: 768px) {
+    .image-box {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow: auto;
+    }
+
+    .image-container {
+        width: 150px !important;
+        height: 150px !important;
+    }
+}
+
+
 
 .content img {
     width: 100%;
@@ -230,6 +260,15 @@ css for section gallery */
     align-items: center;
     flex-wrap: wrap;
 }
+
+@media only screen and (max-width: 768px) {
+    #container {
+        position: relative;
+        height: 100%;
+        overflow: scroll;
+    }
+}
+
 
 .img-gallery {
     background-color: #000;

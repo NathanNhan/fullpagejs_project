@@ -17,3 +17,14 @@ gsap.fromTo(".logo-name", {
     duration: 2,
     delay: 0.5,
 })
+
+
+gsap.fromTo(".custom-nav", {
+    opacity: 0,
+    display: "none"
+}, {
+    opacity: 1,
+    display: "block",
+    duration: 1.5,
+    delay: 3.5
+})

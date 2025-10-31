@@ -6,6 +6,7 @@ new fullpage('#fullpage', {
     navigationTooltips: ['Home', 'Pics', 'Photographers', 'Photos'],
     showActiveTooltip: true,
     slidesNavigation: true,
+    dragAndMove: true,
     controlArrows: false,
     scrollingSpeed: 700
 
