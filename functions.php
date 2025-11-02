@@ -46,3 +46,15 @@ function prefix_bs5_dropdown_data_attribute($atts, $item, $args)
     }
     return $atts;
 }
+
+//register custom logo field
+function theme_prefix_setup()
+{
+
+    add_theme_support('custom-logo', [
+        'height' => 60,
+        'width'  => 60,
+    ]);
+
+}
+add_action('after_setup_theme', 'theme_prefix_setup');

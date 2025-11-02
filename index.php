@@ -1,33 +1,7 @@
 <?php get_header(); ?>
 
 <body>
-    <header class="custom-nav">
-        <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top" role="navigation">
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1"
-                    aria-expanded="false" aria-label="<?php esc_attr_e('Toggle navigation', 'your-theme-slug'); ?>">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <a class="navbar-brand" href="#">Navbar</a>
-                <?php
-                    wp_nav_menu([
-                        'theme_location'  => 'primary',
-                        'depth'           => 2,
-                        'container'       => 'div',
-                        'container_class' => 'collapse navbar-collapse',
-                        'container_id'    => 'bs-example-navbar-collapse-1',
-                        'menu_class'      => 'nav navbar-nav',
-                        'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-                        'walker'          => new WP_Bootstrap_Navwalker(),
-                    ]);
-                ?>
-            </div>
-        </nav>
-
-    </header>
+    <?php get_template_part( "template-part/content", "header" ); ?>
     <div id="fullpage">
 
         <div class="section home">
@@ -57,8 +31,8 @@
             <?php while (have_rows('slider_', '27')): the_row();
                     $image = get_sub_field('slide_item');
                 ?>
-	            <div class="slide"><img src="<?php echo $image; ?>" width="100%" height="100%" alt="" /></div>
-	            <?php endwhile; ?>
+            <div class="slide"><img src="<?php echo $image; ?>" width="100%" height="100%" alt="" /></div>
+            <?php endwhile; ?>
 
             <?php endif; ?>
 
@@ -73,22 +47,22 @@
                         $name_member  = get_sub_field('member_name');
                     ?>
 
-	                <div class="imageBox">
+                <div class="imageBox">
 
-	                    <div class="content">
-	                        <div class="image-container">
-	                            <span class="overlay"></span>
-	                            <img src="<?php echo $image_member; ?>" alt="">
+                    <div class="content">
+                        <div class="image-container">
+                            <span class="overlay"></span>
+                            <img src="<?php echo $image_member; ?>" alt="">
 
-	                        </div>
-	                        <div class="content-txt">
-	                            <h2><?php echo $name_member; ?></h2>
-	                            <p><i class="fa fa-facebook-squre"></i><i class="fa fa-facebook-squre"></i><i
-	                                    class="fa fa-facebook-squre"></i></p>
-	                        </div>
-	                    </div>
-	                </div>
-	                <?php endwhile; ?>
+                        </div>
+                        <div class="content-txt">
+                            <h2><?php echo $name_member; ?></h2>
+                            <p><i class="fa fa-facebook-squre"></i><i class="fa fa-facebook-squre"></i><i
+                                    class="fa fa-facebook-squre"></i></p>
+                        </div>
+                    </div>
+                </div>
+                <?php endwhile; ?>
 
                 <?php endif; ?>
             </div>
@@ -100,12 +74,12 @@
                 <?php while (have_rows('photos', '27')): the_row();
                         $image_gallery = get_sub_field('item');
                     ?>
-	                <div class="gallery">
-	                    <div class="image_gallery"><img src="<?php echo $image_gallery; ?>" alt="">
-	                    </div>
-	                </div>
+                <div class="gallery">
+                    <div class="image_gallery"><img src="<?php echo $image_gallery; ?>" alt="">
+                    </div>
+                </div>
 
-	                <?php endwhile; ?>
+                <?php endwhile; ?>
 
                 <?php endif; ?>
 
